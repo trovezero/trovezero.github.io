@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
     <title>Liquity Agents by trove0</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -27,127 +27,130 @@
         }
     </script>
 </head>
-<!-- <body class="bg-gradient-to-br from-white to-[#00a5cf] bg-opacity-5"> -->
-<body class="">
-    <nav class="fixed top-8 left-1/2 transform -translate-x-1/2 z-50">
-        <div class="bg-white rounded-full drop-shadow px-4 py-4 flex items-center space-x-4">
-            <div class="flex items-center space-x-2">
-                <span class="text-xl font-semibold text-gray-900 font-redhat">Liquity Agents</span>
-                <span class="bg-accent text-gray-900 text-xs px-2 py-1 rounded-full">by trove0</span>
+<body class="min-h-screen">
+    <!-- Mobile-friendly navigation -->
+    <nav class="fixed w-full lg:w-auto top-0 lg:top-8 left-0 lg:left-1/2 lg:-translate-x-1/2 z-50">
+        <div class="w-full bg-white lg:rounded-full lg:shadow-lg px-4 py-4">
+            <div class="flex flex-col lg:flex-row lg:items-center">
+                <div class="flex items-center justify-between">
+                    <div class="flex items-center space-x-2">
+                        <span class="text-xl font-semibold text-gray-900 font-redhat">Liquity Agents</span>
+                        <span class="bg-accent text-gray-900 text-xs px-2 py-1 rounded-full">by trove0</span>
+                    </div>
+                    <button id="menuButton" class="lg:hidden">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-16 6h16"/>
+                        </svg>
+                    </button>
+                </div>
+                <div class="lg:h-5 lg:w-px lg:bg-gray-400 lg:mx-4 hidden lg:block"></div>
+                <div id="mobileMenu" class="hidden lg:flex flex-col lg:flex-row lg:items-center space-y-4 lg:space-y-0 lg:space-x-4 mt-4 lg:mt-0">
+                    <a href="#howitworks" class="text-gray-800 font-redhat hover:text-primary">How it works</a>
+                    <a href="#contracts" class="text-gray-800 font-redhat hover:text-primary">Contracts</a>
+                    <a href="#faq" class="text-gray-800 font-redhat hover:text-primary">FAQ</a>
+                </div>
             </div>
-            <div class="h-5 w-px bg-gray-400"></div>
-            <div class="flex items-center space-x-4">
-                <!-- <a href="#product" class="text-gray-600 font-redhat hover:text-primary">Product</a> -->
-                <!-- <a href="#build" class="text-gray-600 font-redhat hover:text-primary">Build</a> -->
-                <a href="#company" class="text-gray-800 font-redhat, hover:text-primary">How it works</a>
-                <a href="#company" class="text-gray-800 font-redhat, hover:text-primary">Contracts</a>
-                <a href="#help" class="text-gray-800 font-redhat hover:text-primary">FAQ</a>
-            </div>
-            <!-- <button class="bg-secondary text-white px-4 py-1 rounded-full text-sm">Launch App</button> -->
         </div>
     </nav>
 
-    <main>
+    <main class="pt-20 md:pt-24">
         <!-- Hero Section -->
-        <div class="bg-gray-100 rounded-3xl max-w-7xl mx-auto px-4 sm:px-6 lg:px- py-32 mt-32">
-            <div class="text-center max-w-3xl m-auto">
-                <h1 class="text-7xl font-bold text-gray-900 mb-8 font-redhat">Never overpay your loan again.</h1>
-                <!-- <p class="text-2xl text-gray-600 mb-8">Don't overpay on your loan. Our algorithm ensures you always get the optimal rate.</p> -->
-                <p class="text-xl font-redhat text-gray-500 max-w-xl mx-auto">Sleep well knowing your Liquity interest rates adjust automatically to market conditions.</p>
-                <button href="#" class="bg-secondary font-redhat text-white px-6 py-4 mt-8 rounded-full text-md ">Delegate now</button>
+        <div class="bg-gray-100 rounded-xl md:rounded-3xl mx-4 md:max-w-7xl md:mx-auto px-4 py-16 md:py-32 mt-8 md:mt-16">
+            <div class="text-center max-w-3xl mx-auto">
+                <h1 class="text-4xl md:text-7xl font-bold text-gray-900 mb-6 md:mb-8 font-redhat">Never overpay your loan again.</h1>
+                <p class="text-lg md:text-xl font-redhat text-gray-500 max-w-xl mx-auto">Sleep well knowing your Liquity interest rates adjust automatically to market conditions.</p>
+                <button class="bg-secondary font-redhat text-white px-6 py-3 md:py-4 mt-6 md:mt-8 rounded-full text-md w-full md:w-auto">Delegate now</button>
             </div>
         </div>
-        <div class="bg-white py-8">
-            <div class="max-w-7xl mx-auto">
-                <div class="grid grid-cols-2 gap-6">
-                    <div class="bg-[#9fffcb] h-[400px] rounded-xl px-6 py-12 text-center">
-                        <div class="text-4xl font-redhat font-semibold mb-8">10-40%</div>
-                        <p class="text-lg text-gray-800">Target range for redeemable debt, ensuring system stability</p>
-                    </div>
-                    <div class="bg-[#25A18E] rounded-xl px-6 py-12 text-center">
-                        <div class="text-4xl text-white font-redhat font-normal mb-8">Automated</div>
-                        <p class="text-lg text-white">Grace period for rate adjustments, preventing frequent changes Grace period for rate adjustments, preventing frequent changes</p>
-                    </div>
 
+        <!-- Stats Section -->
+        <div class="bg-white py-8">
+            <div class="max-w-7xl mx-auto px-4">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
+                    <div class="bg-[#9fffcb] rounded-xl px-4 md:px-6 py-8 md:py-12 text-center">
+                        <div class="text-3xl md:text-4xl font-redhat font-semibold mb-4 md:mb-8">10-40%</div>
+                        <p class="text-base md:text-lg text-gray-800">Target range for redeemable debt, ensuring system stability</p>
+                    </div>
+                    <div class="bg-[#25A18E] rounded-xl px-4 md:px-6 py-8 md:py-12 text-center">
+                        <div class="text-3xl md:text-4xl text-white font-redhat font-normal mb-4 md:mb-8">Automated</div>
+                        <p class="text-base md:text-lg text-white">Grace period for rate adjustments, preventing frequent changes</p>
+                    </div>
                 </div>
             </div>
         </div>
 
         <!-- Visual Demo -->
         <div class="bg-gray-50 py-8">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="aspect-w-16 aspect-h-9">
-                    <div class="w-full h-[600px] bg-white rounded-3xl shadow-lg flex items-center justify-center">
-                        <p class="text-gray-500">Interface demo coming soon</p>
-                    </div>
+            <div class="max-w-7xl mx-auto px-4">
+                <div class="h-48 md:h-[600px] bg-white rounded-xl md:rounded-3xl shadow-lg flex items-center justify-center">
+                    <p class="text-gray-500">Interface demo coming soon</p>
                 </div>
             </div>
         </div>
-
 
         <!-- How it Works -->
-        <div class="bg-white py-16">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <h2 class="text-4xl font-redhat font-semibold mb-12 text-center">How it Works</h2>
-                <div class="grid grid-cols-3 gap-12">
+        <div id="howitworks" class="bg-white py-12 md:py-16">
+            <div class="max-w-7xl mx-auto px-4">
+                <h2 class="text-3xl md:text-4xl font-redhat font-semibold mb-8 md:mb-12 text-center">How it Works</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
                     <div class="flex flex-col items-center">
-                        <div class="w-16 h-16 bg-[#00a5cf] rounded-full flex items-center justify-center text-white text-2xl font-bold mb-6 font-redhat">1</div>
-                        <h3 class="text-2xl font-redhat font-semibold mb-4">Deploy Contract</h3>
-                        <p class="text-gray-600 text-center text-lg">Deploy the interest manager contract to your preferred network and initialize with your desired parameters.</p>
+                        <div class="w-16 h-16 bg-[#00a5cf] rounded-full flex items-center justify-center text-white text-2xl font-bold mb-4 md:mb-6 font-redhat">1</div>
+                        <h3 class="text-xl md:text-2xl font-redhat font-semibold mb-3 md:mb-4">Deploy Contract</h3>
+                        <p class="text-gray-600 text-center text-base md:text-lg">Deploy the interest manager contract to your preferred network and initialize with your desired parameters.</p>
                     </div>
                     <div class="flex flex-col items-center">
-                        <div class="w-16 h-16 bg-[#00a5cf] rounded-full flex items-center justify-center text-white text-2xl font-bold mb-6 font-redhat">2</div>
-                        <h3 class="text-2xl font-semibold font-redhat mb-4">Configure Settings</h3>
-                        <p class="text-gray-600 text-center text-lg">Set your target debt range and grace period. The system will automatically manage interest rates within these bounds.</p>
+                        <div class="w-16 h-16 bg-[#00a5cf] rounded-full flex items-center justify-center text-white text-2xl font-bold mb-4 md:mb-6 font-redhat">2</div>
+                        <h3 class="text-xl md:text-2xl font-redhat font-semibold mb-3 md:mb-4">Configure Settings</h3>
+                        <p class="text-gray-600 text-center text-base md:text-lg">Set your target debt range and grace period. The system will automatically manage interest rates within these bounds.</p>
                     </div>
                     <div class="flex flex-col items-center">
-                        <div class="w-16 h-16 bg-[#00a5cf] rounded-full flex items-center justify-center text-white text-2xl font-bold mb-6 font-redhat">3</div>
-                        <h3 class="text-2xl font-semibold font-redhat mb-4">Monitor Performance</h3>
-                        <p class="text-gray-600 text-center text-lg">Track your system's performance through our dashboard and adjust parameters as needed for optimal results.</p>
+                        <div class="w-16 h-16 bg-[#00a5cf] rounded-full flex items-center justify-center text-white text-2xl font-bold mb-4 md:mb-6 font-redhat">3</div>
+                        <h3 class="text-xl md:text-2xl font-redhat font-semibold mb-3 md:mb-4">Monitor Performance</h3>
+                        <p class="text-gray-600 text-center text-base md:text-lg">Track your system's performance through our dashboard and adjust parameters as needed for optimal results.</p>
                     </div>
                 </div>
             </div>
         </div>
 
-        <!-- Deployment Addresses -->
-        <div class="bg-gray-50 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-            <h2 class="text-4xl font-semibold text-gray-900 font-redhat mb-8">Contract Addresses</h2>
-            <div class="bg-white rounded-lg shadow overflow-hidden">
+        <!-- Contract Addresses -->
+        <div id="contracts" class="bg-gray-50 mx-4 md:max-w-7xl md:mx-auto px-4 py-12 md:py-16">
+            <h2 class="text-3xl md:text-4xl font-semibold text-gray-900 font-redhat mb-6 md:mb-8">Contract Addresses</h2>
+            <div class="bg-white rounded-lg shadow overflow-x-auto">
                 <table class="min-w-full">
                     <thead class="bg-gray-50">
                         <tr>
-                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Collateral Type</th>
-                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Address</th>
+                            <th class="px-4 md:px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Collateral Type</th>
+                            <th class="px-4 md:px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Address</th>
                         </tr>
                     </thead>
                     <tbody class="divide-y divide-gray-200">
                         <tr>
-                            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">ETH</td>
-                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 font-mono">0xc0ffe..c0de</td>
+                            <td class="px-4 md:px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">ETH</td>
+                            <td class="px-4 md:px-6 py-4 whitespace-nowrap text-sm text-gray-500 font-mono">0xc0ffe..c0de</td>
                         </tr>
                         <tr>
-                            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">wstETH</td>
-                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 font-mono">0xdead...beef</td>
+                            <td class="px-4 md:px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">wstETH</td>
+                            <td class="px-4 md:px-6 py-4 whitespace-nowrap text-sm text-gray-500 font-mono">0xdead...beef</td>
                         </tr>
                         <tr>
-                            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">rETH</td>
-                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 font-mono">0xbaad..f00d</td>
+                            <td class="px-4 md:px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">rETH</td>
+                            <td class="px-4 md:px-6 py-4 whitespace-nowrap text-sm text-gray-500 font-mono">0xbaad..f00d</td>
                         </tr>
                     </tbody>
                 </table>
             </div>
         </div>
 
-        <!-- FAQ -->
-        <div class="bg-white py-16">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <h2 class="text-4xl font-semibold font-redhat text-primary mb-4">Q&A</h2>
-                <p class="text-xl text-gray-600 mb-8">Learn more about the different aspects of Interest Management.</p>
+        <!-- FAQ Section -->
+        <div id="faq" class="bg-white py-12 md:py-16">
+            <div class="max-w-7xl mx-auto px-4">
+                <h2 class="text-3xl md:text-4xl font-semibold font-redhat text-primary mb-3 md:mb-4">Q&A</h2>
+                <p class="text-lg md:text-xl text-gray-600 mb-6 md:mb-8">Learn more about the different aspects of Interest Management.</p>
                 
                 <div class="divide-y divide-gray-200">
                     <details class="group py-4">
                         <summary class="flex justify-between items-center cursor-pointer list-none">
-                            <h3 class="text-2xl font-semibold font-redhat text-gray-900">How does it work?</h3>
+                            <h3 class="text-xl md:text-2xl font-semibold font-redhat text-gray-900">How does it work?</h3>
                             <span class="transform group-open:rotate-45 transition-transform">
                                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/>
@@ -155,13 +158,13 @@
                             </span>
                         </summary>
                         <div class="mt-4 text-gray-600">
-                            <p class="text-lg">The mechanism maintains interest rates by targeting 10-40% of total debt as redeemable before us. When adjustments are needed, it aims for 25% - the midpoint of our target range.</p>
+                            <p class="text-base md:text-lg">The mechanism maintains interest rates by targeting 10-40% of total debt as redeemable before us. When adjustments are needed, it aims for 25% - the midpoint of our target range.</p>
                         </div>
                     </details>
 
                     <details class="group py-4">
                         <summary class="flex justify-between items-center cursor-pointer list-none">
-                            <h3 class="text-2xl font-semibold text-gray-900 font-redhat">What are the key parameters?</h3>
+                            <h3 class="text-xl md:text-2xl font-semibold text-gray-900 font-redhat">What are the key parameters?</h3>
                             <span class="transform group-open:rotate-45 transition-transform">
                                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/>
@@ -169,13 +172,13 @@
                             </span>
                         </summary>
                         <div class="mt-4 text-gray-600">
-                            <p class="text-lg">The system uses three main parameters: a minimum threshold of 10%, a maximum threshold of 40%, and a 3-day grace period for adjustments above the maximum threshold.</p>
+                            <p class="text-base md:text-lg">The system uses three main parameters: a minimum threshold of 10%, a maximum threshold of 40%, and a 3-day grace period for adjustments above the maximum threshold.</p>
                         </div>
                     </details>
 
                     <details class="group py-4">
                         <summary class="flex justify-between items-center cursor-pointer list-none">
-                            <h3 class="text-2xl font-semibold text-gray-900 font-redhat">Why use this system?</h3>
+                            <h3 class="text-xl md:text-2xl font-semibold text-gray-900 font-redhat">Why use this system?</h3>
                             <span class="transform group-open:rotate-45 transition-transform">
                                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/>
@@ -183,13 +186,13 @@
                             </span>
                         </summary>
                         <div class="mt-4 text-gray-600">
-                            <p class="text-lg">Our system provides automated interest rate management that helps maintain stability while minimizing the frequency of rate changes. This results in more predictable borrowing costs.</p>
+                            <p class="text-base md:text-lg">Our system provides automated interest rate management that helps maintain stability while minimizing the frequency of rate changes. This results in more predictable borrowing costs.</p>
                         </div>
                     </details>
 
                     <details class="group py-4">
                         <summary class="flex justify-between items-center cursor-pointer list-none">
-                            <h3 class="text-2xl font-semibold text-gray-900 font-redhat">Is it secure?</h3>
+                            <h3 class="text-xl md:text-2xl font-semibold text-gray-900 font-redhat">Is it secure?</h3>
                             <span class="transform group-open:rotate-45 transition-transform">
                                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/>
@@ -197,7 +200,7 @@
                             </span>
                         </summary>
                         <div class="mt-4 text-gray-600">
-                            <p class="text-lg">The system has undergone thorough testing and auditing. The smart contracts are open-source and verified on Etherscan. However, as with any DeFi protocol, users should understand the risks involved.</p>
+                            <p class="text-base md:text-lg">The system has undergone thorough testing and auditing. The smart contracts are open-source and verified on Etherscan. However, as with any DeFi protocol, users should understand the risks involved.</p>
                         </div>
                     </details>
                 </div>
@@ -205,9 +208,9 @@
         </div>
 
         <!-- Disclaimer -->
-        <div class="max-w-7xl mx-auto sm:px-6 py-16">
-            <div class="bg-gray-50 rounded-xl p-6">
-                <h2 class="text-lg font-medium mb-4 font-redhat">Disclaimer</h2>
+        <div class="max-w-7xl mx-auto px-4 py-12 md:py-16">
+            <div class="bg-gray-50 rounded-xl p-4 md:p-6">
+                <h2 class="text-base md:text-lg font-medium mb-3 md:mb-4 font-redhat">Disclaimer</h2>
                 <p class="text-sm text-gray-600">
                     The Interest Manager is an experimental smart contract system. While it has been carefully designed and tested, 
                     users should be aware of the inherent risks in blockchain technology and DeFi protocols. Past performance does 
@@ -217,10 +220,20 @@
         </div>
     </main>
 
-    <footer class="bg-[#004e64] text-white py-8">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <footer class="bg-[#004e64] text-white py-6 md:py-8">
+        <div class="max-w-7xl mx-auto px-4">
             <p class="text-center">&copy; 2025 A product by trove0</p>
         </div>
     </footer>
+
+    <script>
+        // Mobile menu toggle
+        const menuButton = document.getElementById('menuButton');
+        const mobileMenu = document.getElementById('mobileMenu');
+        
+        menuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
 </body>
 </html>

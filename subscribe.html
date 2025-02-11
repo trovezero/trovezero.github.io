@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;1,400;1,500&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=VT323&display=swap" rel="stylesheet">
+    <title>Credit Agents by trove0</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#004e64',
+                        secondary: '#00a5cf',
+                        accent: '#9fffcb',
+                        tertiary: '#25a18e',
+                        highlight: '#7ae582',
+                    },
+                    fontFamily: {
+                        'redhat': ['Red Hat Display', 'serif'],
+                        'robotomono':['Roboto Mono', 'serif'],
+                    },
+                }
+            }
+        }
+    </script>
+</head>
+<body class="min-h-screen">
+    <!-- Mobile-friendly navigation -->
+    <nav class="fixed w-full lg:w-auto top-0 lg:top-8 left-0 lg:left-1/2 lg:-translate-x-1/2 z-50">
+        <div class="w-full bg-white lg:rounded-full lg:shadow-lg px-4 py-4">
+            <div class="flex flex-col lg:flex-row lg:items-center">
+                <div class="flex items-center justify-between">
+                    <div class="flex items-center space-x-2">
+                        <span class="text-xl font-semibold text-gray-900 font-redhat">Credit Agents</span>
+                        <span class="bg-accent text-gray-900 text-xs px-2 py-1 rounded-full font-redhat">by trove<span class="font-robotomono">0</span></span>
+                    </div>
+                    <button id="menuButton" class="lg:hidden">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-16 6h16"/>
+                        </svg>
+                    </button>
+                </div>
+                <div class="lg:h-5 lg:w-px lg:bg-gray-400 lg:mx-4 hidden lg:block"></div>
+                <div id="mobileMenu" class="hidden lg:flex flex-col lg:flex-row lg:items-center space-y-4 lg:space-y-0 lg:space-x-4 mt-4 lg:mt-0">
+                    <a href="/#howitworks" title="How it works" class="text-gray-800 font-redhat hover:text-primary">How it works</a>
+                    <a href="/#deployments" title="Deployment addresses" class="text-gray-800 font-redhat hover:text-primary">Deployments</a>
+                    <a href="https://dune.com/trovezero/liquity-dashboard" title="Dune Dashboard" class="text-gray-800 font-redhat hover:text-primary">Dune Dashboard</a>
+                    <a href="/#faq" title="FAQ" class="text-gray-800 font-redhat hover:text-primary">FAQ</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="pt-20 md:pt-24">
+        <div class="bg-gray-100 rounded-xl md:rounded-3xl mx-4 md:max-w-7xl md:mx-auto px-4 mt-8">
+            <div class="text-center max-w-3xl mx-auto">
+                <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6 md:mb-8 font-redhat">Get notified whenever we update the interest rate</h1>
+                <p class="text-lg md:text-xl font-redhat text-gray-500 max-w-xl mx-auto">We don't track you, we don't care for your data, we don't sell your email. We just notify! 🫡</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div class="w-full flex justify-center">
+                    <iframe width="540" height="780" src="https://40086565.sibforms.com/serve/MUIFAKvzVq3uRaAF6kcP3HY3uQIYMCkKjspajE1Tb8_z14hG_OU19q7V2KyNEQHcQ-o1LUrXZirwdjzgp5GsRBkh3Jj3WhFMWh8GJGezd6GniFJkol0fLR0Ck4_Sedi3myjD0ET5CIL98HvbzxBjEUozP7B8EPvFJtq61DuwSmh0RSKtXD0ufYIebP2UwgA7MHCbcdku7RHOEtJu" 
+                        frameborder="0" scrolling="auto" allowfullscreen 
+                        class="block mx-auto max-w-full">
+                    </iframe>
+                </div>
+                <div class="w-full flex justify-center">
+                    <iframe width="540" height="780" src="https://40086565.sibforms.com/serve/MUIFAMBVTMVSQxsDSs6OHALxRgIDurabXzAzxNJik8DZ9R5-fIctW6nMrG1YwuoTii6pk6kO6YZ1He0XY3GCKYbfdOPCdWPbR8hT_GRqvveUe5x5xY0VureTDxtOvPfGtCeLEu0QNaHmzbZ-9hhNORjRfFj323a11T1oDBxE2sCBQd9rW68LvwNRuUYpELGzd2Awiz7n0dz0_YMh" 
+                        frameborder="0" scrolling="auto" allowfullscreen 
+                        class="block mx-auto max-w-full">
+                    </iframe>
+                </div>
+                <div class="w-full flex justify-center">
+                    <iframe width="540" height="780" src="https://40086565.sibforms.com/serve/MUIFALlq43I0thum3YXVYSiZEd0uOBmtpgzDQCOEGY57crUMiyR1n7D2jqwvwppvFYKJngrE4JaUPwoi5hYFqUtP4TaL58lzieRPs-GUmNiEP9Zu_0XYcJNq1ZwnOf-EjPaxNxm48l8gHXf5zNyLGN7XZ1jnLaMItVQ_7OfZZMrnuKtP9HK4qVr17PQfMHpI302BBx3fcI0ki1mr" 
+                        frameborder="0" scrolling="auto" allowfullscreen 
+                        class="block mx-auto max-w-full">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-[#004e64] text-white py-6 md:py-8">
+        <div class="max-w-7xl mx-auto px-4">
+            <p class="text-center font-redhat">&copy; 2025 A product by trove<span class="font-robotomono">0</span></p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const menuButton = document.getElementById('menuButton');
+        const mobileMenu = document.getElementById('mobileMenu');
+        
+        menuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
